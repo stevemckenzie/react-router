@@ -73,7 +73,7 @@ const RouterContext = createReactClass({
               props[prop] = element[prop]
         }
 
-        if (typeof components === 'object') {
+        if (typeof components === 'object' && !components.$$typeof) {
           const elements = {}
 
           for (const key in components) {
